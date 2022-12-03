@@ -92,7 +92,7 @@ fun matchPart2(input: List<Pair<Shape, String>>): Int {
 }
 
 fun main() {
-    val input: List<Pair<Shape, String>> = loadInput("01-rock_paper_scissors.txt")
+    val input: List<Pair<Shape, String>> = loadInput("02-rock_paper_scissors.txt")
         .split("\n")
         .filter { line -> line.isNotBlank() }
         .map { match ->
