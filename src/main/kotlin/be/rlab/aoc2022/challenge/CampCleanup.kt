@@ -10,7 +10,7 @@ data class CampSection(
     }
 
     fun overlaps(section: CampSection): Boolean {
-        return section.assignments.any { assignments.contains(it) }
+        return section.assignments.any { it in assignments }
     }
 }
 
