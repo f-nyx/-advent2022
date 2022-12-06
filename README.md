@@ -8,4 +8,6 @@
 
 [Day 4: Camp Cleanup](https://github.com/f-nyx/advent2022/blob/main/src/main/kotlin/be/rlab/aoc2022/challenge/CampCleanup.kt)
 
-[Day 4: Supply Stacks](https://github.com/f-nyx/advent2022/blob/main/src/main/kotlin/be/rlab/aoc2022/challenge/SupplyStacks.kt)
+[Day 5: Supply Stacks](https://github.com/f-nyx/advent2022/blob/main/src/main/kotlin/be/rlab/aoc2022/challenge/SupplyStacks.kt)
+
+[Day 6: Tuning Trouble](https://github.com/f-nyx/advent2022/blob/main/src/main/kotlin/be/rlab/aoc2022/challenge/TuningTrouble.kt)
