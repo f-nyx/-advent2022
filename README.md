@@ -17,3 +17,5 @@
 [Day 8: Treetop Tree House](https://github.com/f-nyx/advent2022/blob/main/src/main/kotlin/be/rlab/aoc2022/challenge/TreetopTreeHouse.kt)
 
 [Day 9: Rope Bridge](https://github.com/f-nyx/advent2022/blob/main/src/main/kotlin/be/rlab/aoc2022/challenge/RopeBridge.kt)
+
+[Day 10: Cathode-Ray Tube](https://github.com/f-nyx/advent2022/blob/main/src/main/kotlin/be/rlab/aoc2022/challenge/CathodeRayTube.kt)

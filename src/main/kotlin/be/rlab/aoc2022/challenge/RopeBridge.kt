@@ -41,12 +41,12 @@ data class Knot(
     val previous: Knot?,
     val history: List<Point> = listOf(position.toPoint())
 ) {
-    fun move(direction: MoveDirection, steps: Int): Knot {
+    fun move(direction: MoveDirection): Knot {
         val next = when(direction) {
-            MoveDirection.LEFT -> position.copy(x = position.x - steps)
-            MoveDirection.RIGHT -> position.copy(x = position.x + steps)
-            MoveDirection.UP -> position.copy(y = position.y - steps)
-            MoveDirection.DOWN -> position.copy(y = position.y + steps)
+            MoveDirection.LEFT -> position.copy(x = position.x - 1)
+            MoveDirection.RIGHT -> position.copy(x = position.x + 1)
+            MoveDirection.UP -> position.copy(y = position.y - 1)
+            MoveDirection.DOWN -> position.copy(y = position.y + 1)
         }
         return copy(
             position = next,
@@ -97,8 +97,7 @@ data class Rope(val head: Knot) {
 
     fun move(direction: MoveDirection, steps: Int): Rope {
         return (0 until steps).fold(this) { rope, _ ->
-            val nextHead = rope.head.move(direction, 1)
-            rope.copy(head = nextHead)
+            rope.copy(head = rope.head.move(direction))
         }
     }
 
@@ -127,8 +126,10 @@ fun simulate(
 fun main() {
     val instructions = loadInput("09-rope_bridge.txt").split("\n")
     val firstRope = simulate(instructions, 2)
-    println(firstRope.tail().history.distinct())
+    val part1Visited = firstRope.tail().history.distinct().size
+    println("2-knots rope - tail unique visited positions: $part1Visited")
 
     val secondRope = simulate(instructions, 10)
-    println(secondRope.tail().history.distinct())
+    val part2Visited = secondRope.tail().history.distinct().size
+    println("10-knots rope - tail unique visited positions: $part2Visited")
 }
